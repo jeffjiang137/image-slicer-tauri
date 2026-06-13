@@ -1,0 +1,23 @@
+[[permission]]
+identifier = "app-commands"
+description = "Allow the frontend to call the local image collection, save, config, and prompt helper commands."
+commands.allow = [
+  "collect_image_entries",
+  "read_image_data_url",
+  "save_pasted_image",
+  "generate_template_image",
+  "load_config",
+  "save_config",
+  "fetch_update_manifest",
+  "download_update_file",
+  "open_target_folder",
+  "save_stitched_image",
+  "save_sliced_images",
+  "save_layered_image",
+  "ocr_image_text",
+  "ocr_image_text_with_api",
+  "export_text_file",
+  "generate_prompt",
+  "test_image_api_connection",
+  "test_api_connection"
+]

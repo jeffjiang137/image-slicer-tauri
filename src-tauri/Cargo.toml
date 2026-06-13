@@ -1,0 +1,31 @@
+[package]
+name = "image_slicer_tauri"
+version = "1.0.36"
+description = "电商设计助手 Tauri 版"
+authors = ["Codex"]
+edition = "2021"
+
+[lib]
+name = "image_slicer_tauri_lib"
+crate-type = ["staticlib", "cdylib", "rlib"]
+
+[build-dependencies]
+tauri-build = { version = "2.6.2", features = [] }
+
+[dependencies]
+base64 = "0.22"
+image = { version = "0.25.5", default-features = true, features = ["jpeg", "png", "webp", "bmp", "tiff"] }
+reqwest = { version = "0.12", default-features = false, features = ["json", "multipart", "rustls-tls-native-roots", "system-proxy"] }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+tauri = { version = "2.11.2", features = [] }
+tauri-plugin-dialog = "2.7.1"
+windows = { version = "0.61.3", features = [
+    "Win32_Foundation",
+    "Win32_Security_Cryptography",
+    "Win32_System_Memory",
+    "Storage",
+    "Storage_Streams",
+    "Graphics_Imaging",
+    "Media_Ocr"
+] }
